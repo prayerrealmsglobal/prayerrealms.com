@@ -6,6 +6,7 @@ import { Instagram, Twitter, Facebook, Mail, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import ParticlesBackground from "@/components/particles-background"
 import AlternatingLogo from "@/components/alternating-logo"
+import Image from "next/image"
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -29,8 +30,13 @@ export default function Home() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full animate-float"
         >
-          <AlternatingLogo />
+          {/* <AlternatingLogo /> */}
+
+          
         </motion.div>
+
+        <Image className="max-w-16 mx-auto text-center" src="/images/prayer-realms-white.png" alt="Description" width={500} height={100} />
+
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -41,7 +47,7 @@ export default function Home() {
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full text-red-500 hover:text-red-400 hover:bg-red-500/10 animate-glitch-hover"
+            className="rounded-full cursor-pointer !text-[#ec1c24] !hover:text-[#f05a28] !hover:bg-red-500/10 animate-glitch-hover"
           >
             <Instagram className="h-5 w-5" />
             <span className="sr-only">Instagram</span>
@@ -49,7 +55,7 @@ export default function Home() {
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full text-red-500 hover:text-red-400 hover:bg-red-500/10 animate-glitch-hover"
+            className="rounded-full cursor-pointer !text-[#ec1c24] !hover:text-[#f05a28] !hover:bg-red-500/10 animate-glitch-hover"
           >
             <Twitter className="h-5 w-5" />
             <span className="sr-only">Twitter</span>
@@ -57,7 +63,7 @@ export default function Home() {
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full text-red-500 hover:text-red-400 hover:bg-red-500/10 animate-glitch-hover"
+            className="rounded-full cursor-pointer !text-[#ec1c24] !hover:text-[#f05a28] !hover:bg-red-500/10 animate-glitch-hover"
           >
             <Facebook className="h-5 w-5" />
             <span className="sr-only">Facebook</span>
@@ -65,28 +71,29 @@ export default function Home() {
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-full text-red-500 hover:text-red-400 hover:bg-red-500/10 animate-glitch-hover"
+            className="rounded-full cursor-pointer !text-[#ec1c24] !hover:text-[#f05a28] !hover:bg-red-500/10 animate-glitch-hover"
           >
             <Mail className="h-5 w-5" />
             <span className="sr-only">Email</span>
           </Button>
         </motion.div>
+                <h1 className="text-4xl !mt-8 !font-bold text-white text-center capitalize">COMING SOON</h1>
       </div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="absolute bottom-4 w-full text-center text-xs text-red-500/70"
+        className="absolute bottom-4 w-full text-center text-xs text-[#ec1c24]/70"
       >
-        <p>© {new Date().getFullYear()} Yawningz Shots. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} PrayerRealms Global. All rights reserved.</p>
       </motion.div>
 
       <div className="fixed bottom-6 right-6 z-20">
         <Button
           variant="outline"
           size="icon"
-          className="rounded-full bg-red-600/10 border-red-500/30 hover:bg-red-600/20 text-red-500 animate-spin-slow"
+          className="rounded-full bg-red-600/10 border-red-500/30 hover:bg-red-600/20 text-[#ec1c24] animate-spin-slow"
         >
           <Sparkles className="h-5 w-5" />
           <span className="sr-only">Effects</span>
